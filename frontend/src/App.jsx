@@ -2,13 +2,13 @@ import React from 'react'
 
 const App = () => {
   return (
+
     <>
       <div>
-           This is Hackation App
-      <div/>
+        This is Hackathon App
+      </div>
     </>
-    
   )
 }
 
-export default App
+export default App;
