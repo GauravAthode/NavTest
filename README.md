@@ -1,164 +1,154 @@
-﻿# VoltPath — EV Route & Charging Planner with Energy Intelligence (Part 1)
+﻿# NavKalpana-RICR-NK-0016 — VoltPath (Part 1)
 
-Repository Name: NavKalpana-RICR-NK-0016
-
-VoltPath is a deterministic EV route-energy simulation platform that helps EV users plan safe long-distance journeys by intelligently calculating charging stops, energy consumption, trip duration, and electricity cost.
-
-This project strictly implements ONLY the features defined in the Hackathon PDF (VoltPath Part 1).
+VoltPath is an EV Route & Charging Planner that helps users plan long-distance electric vehicle journeys by simulating battery usage and optimizing charging stops.
 
 ---
 
-## Team Code
-NavKalpana-RICR-NK-0016
+## 🚨 Problem Statement
+
+Electric vehicle users often face range anxiety due to uncertainty in battery consumption and charging availability.
+
+Traditional navigation systems provide distance but do not consider energy usage or charging needs.
+
+VoltPath addresses this by simulating battery discharge and identifying optimal charging points.
 
 ---
 
-## Team Members & Roles
+## 💡 Solution
 
-| Name | Role |
-|------|------|
-| Gaurav Athode | Full Stack Development |
-| Hemant Rajput | Backend Simulation |
-| Ashish Rajput | Database Integration |
-| Narendra Vishwakarma | UI/UX & Testing |
-
----
-
-## Problem Statement
-
-Electric Vehicle users face **range anxiety** during long-distance travel.
-
-VoltPath solves this by:
-
-- Planning optimized charging stops
-- Simulating energy consumption across route segments
-- Estimating charging duration
-- Calculating electricity cost
-- Guaranteeing minimum reserve battery at destination
-
----
-
-## Features Implemented (Strictly from PDF)
-
-✔ Route distance & driving time  
-✔ Route geometry (polyline)  
-✔ Energy consumption calculation  
-✔ Segment-level battery simulation (SoC curve)  
-✔ Charging stop optimization  
-✔ Charging time estimation  
-✔ Electricity cost estimation  
-✔ Dashboard visualization  
-✔ Map with charging markers  
-✔ Backend API  
-✔ Database integration  
-
-❌ No extra features added beyond Part 1 scope
-
----
-
-## Tech Stack
-
-Frontend:
-- React (Vite)
-- Tailwind CSS
-- React Leaflet
-- Recharts
-
-Backend:
-- Node.js
-- Express.js
-
-Database:
-- MongoDB
-
-Routing & Geocoding:
-- OpenStreetMap
-- OSRM
-
----
-
-## Project Folder Structure
-
-NavKalpana-RICR-NK-0016
-│
-├── frontend
-├── backend
-├── docs
-│ ├── api-documentation.md
-│ ├── presentation.pptx
-│ └── problem-statement.pdf
-└── README.md
-
----
-
-## Installation Steps
-
-### Backend
-
-cd backend
-npm install
-npm run seed
-npm run dev
-
-
-### Frontend
-
-cd frontend
-npm install
-npm run dev
-
-
----
-
-## API Endpoint
-
-POST `/api/trip/plan`
-
-Generates:
+VoltPath calculates:
 
 - Route distance
+- Energy required
+- Safe driving range
 - Charging stops
-- SoC curve
 - Charging time
 - Trip cost
 
----
-
-## Expected Output
-
-Dashboard displays:
-
-- Interactive route map
-- Charging station markers
-- Segment-level SoC curve
-- Total distance
-- Driving time
-- Charging time
-- Total energy required
-- Trip electricity cost
+It provides an interactive dashboard with route visualization and battery SoC tracking.
 
 ---
 
-## Demo Note
+## ⚙️ Core Features
 
-Charging stations are seeded in MongoDB.
-
-If planning fails for some routes:
-
-Run:
-
-npm run seed
-
-
-Or add more stations.
+✔ Route Distance & Time Calculation  
+✔ Energy Consumption Simulation  
+✔ Battery SoC Tracking  
+✔ Charging Stop Optimization  
+✔ Charging Time Estimation  
+✔ Trip Cost Calculation  
+✔ Interactive Map Visualization  
+✔ SoC Curve Dashboard  
 
 ---
 
-## Future Scope
+## 🧱 Technology Stack
 
-(Not implemented as per hackathon restriction)
+Frontend: React (Vite), Tailwind CSS  
+Backend: Node.js, Express  
+Database: MongoDB  
+Visualization: Leaflet, Recharts  
 
-- Real-time charging availability
-- Dynamic pricing
-- Charging curve modeling
+---
 
+## 🗂️ Project Structure
+
+```
+NavKalpana-RICR-NK-0016
+ ├─ backend
+ ├─ frontend
+ ├─ docs
+ │   ├─ problem-statement.pdf
+ │   ├─ architecture-diagram.png
+ │   ├─ api-documentation.md
+ │   └─ presentation.pptx
+ └─ README.md
+```
+
+---
+
+## 🧠 System Workflow
+
+Route → Distance → Energy → Safe Range → Charging Stop → Time → Cost → Visualization
+
+---
+
+## 🧑‍💻 Team Contribution
+
+### 🔹 Gaurav Athode — Full Stack Development
+- Integrated frontend and backend
+- Developed route input and dashboard connection
+
+### 🔹 Hemant Rajput — Backend Simulation
+- Implemented energy calculation
+- Developed SoC simulation
+- Designed charging stop optimization
+
+### 🔹 Ashish Rajput — Database Integration
+- Created Trip & ChargingStation models
+- Implemented database storage
+
+### 🔹 Narendra Vishwakarma — UI/UX & Testing
+- Designed modern dashboard
+- Integrated map & SoC chart
+
+---
+
+## 📊 Output
+
+VoltPath generates:
+
+- Optimized EV travel plan
+- Required charging stops
+- Total trip time
+- Energy usage
+- Trip cost
+- Battery SoC curve
+
+---
+
+## 🚀 Impact
+
+- Reduces EV range anxiety
+- Improves travel planning
+- Supports sustainable mobility
+
+---
+
+## 🔮 Future Scope
+
+- Real-time charging data
+- Dynamic energy prediction
+- AI-based optimization
+
+---
+
+## 📘 API Documentation
+
+See:
+
+docs/api-documentation.md
+
+---
+
+## 📎 Architecture
+
+See:
+
+docs/architecture-diagram.png
+
+---
+
+## 📄 Problem Statement
+
+See:
+
+docs/problem-statement.pdf
+
+---
+
+## 🎞️ Presentation
+
+See:
+
+docs/presentation.pptx
