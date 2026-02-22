@@ -1,13 +1,10 @@
-import React from 'react'
+import React from "react";
+import HomePage from "./pages/HomePage.jsx";
 
-const App = () => {
+export default function App() {
   return (
-
-    <>
-      <div>
-      </div>
-    </>
-  )
+    <div className="min-h-screen">
+      <HomePage />
+    </div>
+  );
 }
-
-export default App;
